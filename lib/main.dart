@@ -14,24 +14,41 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Brady Bunch Test'),
         ),
-        body: const Center(
-          
-            child: Row(
-            children: [
-              Expanded(
-                child: BradyTile(imagePath: 'assets/images/greg.jpg'),
+        body:  Center(
+          child: Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(child: BradyTile(imagePath: 'assets/images/mike.jpg')),
+                  Expanded(child: BradyTile(imagePath: 'assets/images/carol.jpg')),
+                  Expanded(child: BradyTile(imagePath: 'assets/images/alice.jpg')),
+                ],
               ),
-              Expanded(
-                child: BradyTile(imagePath: 'assets/images/marcia.jpg'),
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(child: BradyTile(imagePath: 'assets/images/greg.jpg')),
+                  Expanded(child: BradyTile(imagePath: 'assets/images/marcia.jpg')),
+                  Expanded(child: BradyTile(imagePath: 'assets/images/peter.jpg')),
+                ],
               ),
-              Expanded(
-                 child: BradyTile(imagePath: 'assets/images/peter.jpg'),
+            ),
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(child: BradyTile(imagePath: 'assets/images/jan.jpg')),
+                  Expanded(child: BradyTile(imagePath: 'assets/images/bobby.jpg')), 
+                  Expanded(child: BradyTile(imagePath: 'assets/images/cindy.jpg')),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-     ),
-      );
+      ),
+      ),
+    );
   }
 }
 

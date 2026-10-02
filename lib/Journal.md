@@ -5,3 +5,7 @@ I put my images in two different folder nested so that if I wanted I could targe
 ### What happens if you remove Expanded from one of the three tiles in the Row? How does Expanded communicate size constraints down to your BradyTile?
 
 When I removed expanded from one of the three tiles in the row the tile that is is removed from gets bigger to fit its original pixel size verses trying to size to fit so that all the images are the same size equally. This makes is so that expanded tiles only get the remaining size after the unexpanded tile is at full size.
+
+### Describe how nesting Expanded widgets both vertically (inside the Column) and horizontally (inside each Row) enforces the “Golden Rule” of Flutter layout (“Constraints go down, Sizes go up”).
+
+Because expanded widgets split up space the constraints comes down from the parent column then divides the space between each row equally.
