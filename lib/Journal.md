@@ -1,0 +1,3 @@
+### How did you configure your pubspec.yaml to register the images? What happens when you display a large image without container constraints, and how does BoxFit.cover handle scaling?
+
+I put my images in two different folder nested so that if I wanted I could target the image folder itself instead of the individual images. One of the wat that the image changed when it had container restraints is that the image tried to display at its original size and BoxFit.cover helped with keeping the image clear withought it causing distortion and cropped it once it reached a certain size small.
