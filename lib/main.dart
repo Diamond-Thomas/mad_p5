@@ -15,16 +15,23 @@ class MyApp extends StatelessWidget {
           title: const Text('Brady Bunch Test'),
         ),
         body: const Center(
-          child: SizedBox(
-            width: 200,
-            height: 200,
-            child: BradyTile(
-              imagePath: 'assets/images/alice.jpg'
-            ),
+          
+            child: Row(
+            children: [
+              Expanded(
+                child: BradyTile(imagePath: 'assets/images/greg.jpg'),
+              ),
+              Expanded(
+                child: BradyTile(imagePath: 'assets/images/marcia.jpg'),
+              ),
+              Expanded(
+                 child: BradyTile(imagePath: 'assets/images/peter.jpg'),
+              ),
+            ],
           ),
         ),
      ),
-    );
+      );
   }
 }
 
@@ -41,7 +48,8 @@ class BradyTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      padding: const EdgeInsets.all(5),
+      margin: const EdgeInsets.all(0.5),
+      padding: const EdgeInsets.all(3.5),
       child: Image.asset(
         imagePath,
         fit: BoxFit.cover
