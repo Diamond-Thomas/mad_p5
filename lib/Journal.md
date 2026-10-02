@@ -9,3 +9,7 @@ When I removed expanded from one of the three tiles in the row the tile that is 
 ### Describe how nesting Expanded widgets both vertically (inside the Column) and horizontally (inside each Row) enforces the “Golden Rule” of Flutter layout (“Constraints go down, Sizes go up”).
 
 Because expanded widgets split up space the constraints comes down from the parent column then divides the space between each row equally.
+
+### Compare building a 3x3 grid using nested Row/Column with Expanded versus using GridView.count(crossAxisCount: 3). What are the trade-offs between the two approaches in terms of constraint control, code simplicity, and flexibility?
+
+One of the things I noteced between using rows and columns versus using grid cound was that with gride the photos didn't resize vertically when the screen got smaller or bigger it instead traded off for a scroll. Grid was also significantly easier with code simplicity since their was only one grid instead of three rows wrapped in a column which made the code harder to read. The grid also would make it easy to change how many photos you want in a row.
